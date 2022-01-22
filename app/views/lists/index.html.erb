@@ -1,0 +1,9 @@
+<h1>Your lists</h1>
+
+<div class="grid-container">
+  <% @lists.each do |list| %>
+    <div class="list-card grid-item">
+      <h3><%= list.name %></h3>
+    </div>
+  <% end %>
+</div>

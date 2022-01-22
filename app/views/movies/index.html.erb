@@ -1,0 +1,9 @@
+<h1> Today's pick of movies</h1>
+
+<div class="container">
+<% @movies.each do |movie| %>
+  <h3><%= movie.title %></h3>
+  <p><%= movie.overview %></p>
+  <p><%= movie.rating %></p>
+<% end %>
+</div>

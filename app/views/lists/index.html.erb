@@ -1,9 +1,10 @@
 <h1>Your lists</h1>
 
+<p class="btn btn-info"><%= link_to "+", new_list_path %></p>
 <div class="grid-container">
   <% @lists.each do |list| %>
     <div class="list-card grid-item">
-      <h3><%= list.name %></h3>
+      <h3><%= link_to list.name, list_path(list.id) %></h3>
     </div>
   <% end %>
 </div>

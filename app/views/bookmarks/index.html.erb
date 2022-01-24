@@ -1,0 +1,10 @@
+<h1>Your Bookmarks</h1>
+
+<p class="btn btn-info"><%= link_to "+", new_bookmark_path %></p>
+<div class="grid-container">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="list-card grid-item">
+      <h3><%= bookmark.movie %></h3>
+    </div>
+  <% end %>
+</div>

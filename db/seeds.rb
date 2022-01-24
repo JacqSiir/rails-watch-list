@@ -17,3 +17,5 @@ List.create(name: "Horror")
 List.create(name: "Documentary")
 List.create(name: "History")
 List.create(name: "Childrens")
+
+Bookmark.create(comment: "Great film", movie:1, list:4)

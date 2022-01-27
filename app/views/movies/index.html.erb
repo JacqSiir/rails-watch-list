@@ -1,8 +1,9 @@
 <h1> Today's pick of movies</h1>
 
+<p class="btn btn-info"><%= link_to "+", new_movie_path %></p>
 <div class="container">
 <% @movies.each do |movie| %>
-  <h3><%= movie.title %></h3>
+  <h3><%= link_to movie.title, movie_path(movie.id) %></h3>
   <p><%= movie.overview %></p>
   <p><%= movie.rating %></p>
 <% end %>

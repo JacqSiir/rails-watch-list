@@ -13,7 +13,13 @@
   </head>
 
   <body>
-    <nav class="navbar-lewagon"></nav>
+    <nav class="navbar-lewagon">
+      <div class="nav-button-group">
+       <h5 class="nav-button"><%= link_to "Movies", movies_path %></h5>
+       <h5 class="nav-button"><%= link_to "Bookmarks", bookmarks_path %></h5>
+       <h5 class="nav-button"><%= link_to "Lists", lists_path %></h5>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

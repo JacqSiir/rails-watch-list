@@ -11,3 +11,18 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-button-group {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  justify-content: space-between;
+  position: absolute;
+  right: 0px;
+  margin: 15px;
+}
+
+.nav-button{
+  font-weight: bold;
+  text-decoration: none;
+}

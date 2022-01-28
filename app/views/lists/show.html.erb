@@ -1,5 +1,14 @@
 <p class="btn btn-info"><%= link_to "Back to Lists", lists_path %></p>
 <h1><%= @list.name %></h1>
+
+<p class="btn btn-info"><%= link_to "New bookmark", new_bookmark_path %></p>
 <p>Your movies:</p>
 
-<p class="btn btn-info"><%= link_to "+", new_bookmark_path %></p>
+<div class="card-grid-container">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="bookmark-card card-grid-item ">
+      <h3><%= link_to bookmark.movie.title, movie_path(bookmark.movie) %></h3>
+      <p>Comment: <%= bookmark.comment %></p>
+    </div>
+  <% end %>
+</div>

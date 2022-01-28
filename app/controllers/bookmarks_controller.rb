@@ -12,10 +12,10 @@ class BookmarksController < ApplicationController
 
   def create
     @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.list = @list
+    #@bookmark.list = @list
 
     flash[:notice] = @bookmark.errors.full_messages.to_sentence unless @bookmark.save
-    redirect_to bookmarks_path(@bookmark)
+    redirect_to list_path(@bookmark.list)
   end
 
   def destroy
@@ -26,7 +26,7 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:comment, :movie, :list)
+    params.require(:bookmark).permit(:comment, :movie_id, :list_id)
   end
 
   def set_bookmark
